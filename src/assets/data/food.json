@@ -1,0 +1,20 @@
+
+{
+    "food": [
+        {
+            "title": "potato",
+            "des": "floral embrace",
+            "img": "../../../../assets/img/food1.jpg"
+        },
+        {
+            "title": "potato",
+            "des": "floral embrace",
+            "img": "../../../../assets/img/food1.jpg"
+        },
+        {
+            "title": "potato",
+            "des": "floral embrace",
+            "img": "../../../../assets/img/food1.jpg"
+        }
+    ]
+}
