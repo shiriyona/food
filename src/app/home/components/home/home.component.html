@@ -7,32 +7,30 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <div class="container">
-         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" (click)="myMobile()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" (click)="myMobile()">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden active">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="">
+                    <li class="gallerey">
                         <a class="page-scroll" href="#gallerey">{{"FOOD" | translate}}</a>
                     </li>
                     <li class="">
                         <a class="page-scroll" href="#events">{{"GALLERY" | translate}}</a>
                     </li>
-                    <!-- <li class="">
-                        <a class="page-scroll" href="#about">{{"ABOUT" | translate}}</a>
-                    </li> -->
                     <li class="">
                         <a class="page-scroll" href="#team">{{"CONTACT" | translate}}</a>
                     </li>
-         
+
                 </ul>
             </div>
         </div>
@@ -50,12 +48,13 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">{{"EVENTs" | translate}}</h2>
-                    <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I don't want this timeline crap. Haha.</h3>
+                    <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I
+                        don't want this timeline crap. Haha.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12" *ngFor="let item of food">
-                    <ul class="timeline" >
+                    <ul class="timeline">
                         <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" [src]="item?.img" class="img-responsive">
@@ -66,7 +65,10 @@
                                     <h4 class="subheading">Our Humble Beginnings</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
+                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -84,17 +86,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item" *ngFor="let item of food"  >
-                    <div (click)="openDialog()">
-                    <a href="#portfolioModal1">
-                        <img [src]="item?.img" class="img-responsive" (click)="openDialog()">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>{{item?.title}}</h4>
-                        <p class="text-muted">{{item?.des}}</p>
+                <div class="col-md-4 col-sm-6 portfolio-item" *ngFor="let item of food">
+                    <div (click)="openDialog(item)">
+                        <img [src]="item?.img" class="img-responsive">
+                        <div class="portfolio-caption">
+                            <h4>{{item?.title}}</h4>
+                            <p class="text-muted">{{item?.des}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </section>
@@ -108,8 +108,7 @@
             </div>
             <div class="row">
                 <div class="team-member">
-                    <img             
-                        class="img-responsive img-circle" alt="">
+                    <img class="img-responsive img-circle" alt="">
                     <h2 class="section-heading">{{"For more details and orders" | translate}}</h2>
                     <h4>{{"MEIR BININFELD" | translate}}</h4>
                     <p class="text-muted">{{"MEIR INFORMATION" |translate}}</p>

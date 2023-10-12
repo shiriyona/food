@@ -41,12 +41,12 @@ export class HomeComponent  implements OnInit {
     });
   }
 
-  openDialog() {
+  openDialog(item: Food) {
     const dialogRef = this.dialog.open(FoodModalComponent);
-
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+    this.homeService.onSelectedFood(item);
   }
 
   ngOnDestroy(): void {

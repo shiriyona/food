@@ -2,13 +2,13 @@
 {
     "food": [
         {
-            "title": "potato",
-            "des": "floral embrace",
+            "title": "potato1",
+            "des": "floral embrace1",
             "img": "../../../../assets/img/food1.jpg"
         },
         {
-            "title": "potato",
-            "des": "floral embrace",
+            "title": "potato2",
+            "des": "floral embrace2",
             "img": "../../../../assets/img/food1.jpg"
         },
         {

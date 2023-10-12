@@ -8,11 +8,20 @@ import { Food } from '../models/food.model';
   providedIn: 'root'
 })
 export class HomeService {
+  item: Food;
 
   constructor() { }
 
   getFood() : Observable<Food[]>  {
     return of(FOOD_MOCK_DATA);
+  }
+
+  onSelectedFood(item: Food) {
+    this.item = item;
+  }
+
+  getSelectedFood() {
+    return this.item;
   }
 
 }
