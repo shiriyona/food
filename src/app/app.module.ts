@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
+import { RecipesModule } from './recipes/recipes.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -24,6 +25,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   imports: [
     HomeModule,
+    RecipesModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

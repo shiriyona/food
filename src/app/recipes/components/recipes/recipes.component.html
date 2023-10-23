@@ -1,0 +1,7 @@
+<p>recipes works!</p>
+<div class="food-list" *ngFor="let item of food">
+    <img class="img-food" [src]="item?.img">
+    <div class="card-content">
+        {{item?.title}}
+    </div>
+</div>
