@@ -1,7 +1,7 @@
 <p>recipes works!</p>
-<div class="food-list" *ngFor="let item of food">
-    <img class="img-food" [src]="item?.img">
-    <div class="card-content">
+<div class="recipe-wrapper" *ngFor="let item of food" (click)="openRecipe()">
+    <img class="recipe-img" [src]="item?.img">
+    <div class="recipe-content">
         {{item?.title}}
     </div>
 </div>

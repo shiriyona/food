@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Food } from 'src/app/home/models/food.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipes',
@@ -13,7 +14,7 @@ export class RecipesComponent {
   getFoodSubscription: Subscription;
   getEventSubscription: Subscription;
   
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -25,6 +26,13 @@ export class RecipesComponent {
     this.getFoodSubscription = this.http.get<{ food: Food[] }>(url).subscribe((response) => {
       this.food = response.food;
     });
+  }
+
+  openRecipe() {
+    const url = this.router.serializeUrl(
+      this.router.createUrlTree(['/recipe'])
+    );
+    window.open(url, '_blank');
   }
 
 }
