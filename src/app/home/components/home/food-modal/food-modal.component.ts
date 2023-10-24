@@ -13,7 +13,7 @@ export class FoodModalComponent {
   food: Food;
   getFoodSubscription: Subscription;
 
-  constructor(private http: HttpClient, private homeService: HomeService) {
+  constructor(private homeService: HomeService) {
   }
 
   ngOnInit(): void {

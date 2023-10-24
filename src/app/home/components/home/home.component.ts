@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 import { Food } from '../../models/food.model';
 import { Subscription } from 'rxjs';
 import { HomeService } from '../../services/home.service';
 import { HttpClient } from '@angular/common/http';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import {MatDialog} from '@angular/material/dialog';
 import { FoodModalComponent } from './food-modal/food-modal.component';
 
 
@@ -19,7 +20,11 @@ export class HomeComponent  implements OnInit {
   getFoodSubscription: Subscription;
   getEventSubscription: Subscription;
   
-  constructor(private http: HttpClient, private homeService: HomeService, public dialog: MatDialog) {
+  constructor(private translate: TranslateService, private router: Router,
+     private http: HttpClient, private homeService: HomeService, public dialog: MatDialog) {
+    translate.addLangs(['hb', 'klingon']);
+    translate.setDefaultLang('hb');
+    translate.use('hb');
   }
 
   ngOnInit(): void {
@@ -39,6 +44,10 @@ export class HomeComponent  implements OnInit {
     this.getEventSubscription = this.http.get<{ food: Food[] }>(url).subscribe((response) => {
       this.events = response.food;
     });
+  }
+
+  openRecipesPage() {
+    this.router.navigate(['/recipes']);
   }
 
   openDialog(item: Food) {

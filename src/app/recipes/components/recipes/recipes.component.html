@@ -1,7 +1,6 @@
-<p>recipes works!</p>
-<div class="recipe-wrapper" *ngFor="let item of food" (click)="openRecipe()">
-    <img class="recipe-img" [src]="item?.img">
+<div class="recipe-wrapper col-md-6" *ngFor="let recipe of recipes" (click)="openRecipe(recipe)">
+    <img class="recipe-img" [src]="recipe?.img">
     <div class="recipe-content">
-        {{item?.title}}
+        {{recipe?.title}}
     </div>
 </div>

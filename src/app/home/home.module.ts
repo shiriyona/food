@@ -34,7 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }),
     ],
     providers: [],
-    exports:[]
+    exports:[HomeComponent]
   })
   
   export class HomeModule { }

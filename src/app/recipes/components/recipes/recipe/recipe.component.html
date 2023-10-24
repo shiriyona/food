@@ -1,132 +1,35 @@
-<div class="container-fluid">
-    <section class="row recipe--header">
-      <div class="col-sm-6 col-xs-5">
-        <span class="glyphicon glyphicon-time"></span>
-        1hr 20m
-      </div>
-    </section>
-    <section class="row recipe--body">
-      <div class="col-sm-6 col-sm-push-6">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
-            <h3>Ingredients</h3>
-            <ul>
-              <!-- ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">1</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">lb</span>
-                <span class="ng-binding">ground bison</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">1</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cup</span>
-                <span class="ng-binding">diced onion</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">4</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding"></span>
-                <span class="ng-binding">diced jalepeños</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">1</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cup</span>
-                <span class="ng-binding">black beans</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">1</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cup</span>
-                <span class="ng-binding">great northern beans</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">1</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cup</span>
-                <span class="ng-binding">kidney beans</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">4</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cloves</span>
-                <span class="ng-binding">garlic</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">2</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">tbsp</span>
-                <span class="ng-binding">mexican chili powder</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">2</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">tsp</span>
-                <span class="ng-binding">salt</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">2</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">tsp</span>
-                <span class="ng-binding">ground pepper</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">1</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cup</span>
-                <span class="ng-binding">cayenne</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">28</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">oz</span>
-                <span class="ng-binding">crushed tomatoes</span>
-              </li><!-- end ngRepeat: ingredient in ingredients --><li class="recipe--ingredient ng-scope" ng-class="{ 'is-checked': ingredient.checked }" ng-click="toggleCheck($index)" ng-repeat="ingredient in ingredients">
-                <span class="glyphicon glyphicon-unchecked" ng-class="{ 'glyphicon-unchecked': !ingredient.checked, 'glyphicon-check': ingredient.checked }"></span>
-                <!-- ngIf: ingredient.isWhole --><span class="recipe--amount ng-scope ng-binding" ng-if="ingredient.isWhole">3</span><!-- end ngIf: ingredient.isWhole -->
-                <!-- ngIf: ingredient.hasFraction -->
-                <span class="recipe--unit ng-binding">cups</span>
-                <span class="ng-binding">beef broth</span>
-              </li><!-- end ngRepeat: ingredient in ingredients -->
-            </ul>
-          </div>
+<div class="container box">
+    <div class="row">
+        <!---Left Side--->
+        <div class="col-lg">
+            <h1> {{recipe?.title | translate}}</h1>
+            <h5><i class="far fa-clock"></i> {{recipe.time}} | <i class="far fa-clock"></i> {{recipe.preparation}} | <i
+                    class="far fa-smile-wink"></i> {{recipe.serving}}
+            </h5>
+            <hr>
+            <h4>{{"INGREDIENTS" | translate}}</h4>
+            <div class="row Ingredients">
+                <div class="col">
+                    <ul>
+                        <div class="ingredients" *ngFor="let ingredient of recipe?.ingredients | keyvalue">
+                            <li><span> {{ingredient?.value}}</span></li>
+                        </div>
+                        <img class="recipe-img" [src]="recipe.img">
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-sm-pull-6">
-        <div class="row">
-          <div class="col-xs-11 col-xs-offset-1">
-            <h3>Directions</h3>
-            <ol class="recipe--directions">
-              <!-- ngRepeat: direction in directions --><li ng-class="{ 'is-completed': direction.isCompleted }" ng-click="toggleDirection($index)" ng-repeat="direction in directions" class="ng-scope">
-                <span class="ng-binding">Get your filthiest campfire-scorched Dutch oven over the fire the best you can situate it.</span>
-                <br>
-                <!-- ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope pot" ng-class="{ 'pot': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images -->
-              </li><!-- end ngRepeat: direction in directions --><li ng-class="{ 'is-completed': direction.isCompleted }" ng-click="toggleDirection($index)" ng-repeat="direction in directions" class="ng-scope">
-                <span class="ng-binding">Brown the bison.</span>
-                <br>
-                <!-- ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope buffalo" ng-class="{ 'buffalo': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images -->
-              </li><!-- end ngRepeat: direction in directions --><li ng-class="{ 'is-completed': direction.isCompleted }" ng-click="toggleDirection($index)" ng-repeat="direction in directions" class="ng-scope">
-                <span class="ng-binding">Add the diced onion and spices, sautee until soft.</span>
-                <br>
-                <!-- ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope onion" ng-class="{ 'onion': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope jalapeno" ng-class="{ 'jalapeno': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope garlic" ng-class="{ 'garlic': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope salt" ng-class="{ 'salt': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope pepper" ng-class="{ 'pepper': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope cayenne" ng-class="{ 'cayenne': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images -->
-              </li><!-- end ngRepeat: direction in directions --><li ng-class="{ 'is-completed': direction.isCompleted }" ng-click="toggleDirection($index)" ng-repeat="direction in directions" class="ng-scope">
-                <span class="ng-binding">Add tomatoes and broth and bring to a simmer for 40 minutes.</span>
-                <br>
-                <!-- ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope tomatoes" ng-class="{ 'tomatoes': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope broth" ng-class="{ 'broth': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images -->
-              </li><!-- end ngRepeat: direction in directions --><li ng-class="{ 'is-completed': direction.isCompleted }" ng-click="toggleDirection($index)" ng-repeat="direction in directions" class="ng-scope">
-                <span class="ng-binding">Add beans and cook another 30 minutes.</span>
-                <br>
-                <!-- ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope pinto-beans" ng-class="{ 'pinto-beans': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope black-beans" ng-class="{ 'black-beans': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope great-northern-beans" ng-class="{ 'great-northern-beans': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope kidney-beans" ng-class="{ 'kidney-beans': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images -->
-              </li><!-- end ngRepeat: direction in directions --><li ng-class="{ 'is-completed': direction.isCompleted }" ng-click="toggleDirection($index)" ng-repeat="direction in directions" class="ng-scope">
-                <span class="ng-binding">Serve with Tabasco and a giant spoon.</span>
-                <br>
-                <!-- ngRepeat: image in direction.images --><div class="recipe--ingredient-preview ng-scope done" ng-class="{ 'done': true, 'is-hidden': direction.isCompleted }" ng-repeat="image in direction.images"></div><!-- end ngRepeat: image in direction.images -->
-              </li><!-- end ngRepeat: direction in directions -->
-            </ol>
-          </div>
+        <div class="col-lg box2">
         </div>
-      </div>
-    </section>
-  </div>
+        <div class="directions">
+            <h4>{{"DIRECTIONS"| translate }}</h4>
+            <div *ngFor="let step of recipe.recipeSteps | keyvalue">
+
+                <i class="far fa-check-square"></i> <span style="color:#caaca9;font-weight:bold;"><strong>S T E P
+                        {{step.key}}</strong></span>
+                <p>{{step.value}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

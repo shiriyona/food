@@ -1,0 +1,23 @@
+{
+    "recipe": [
+        {
+            "id": 1,
+            "title": "Omelette",
+            "img": "../../../../assets/img/food9.JPG",
+            "time": "2 HRS 30 MINS",
+            "preparation": "PREP: 40 MINS",
+            "serving": "MAKES 6 SERVING",
+            "recipeSteps": {
+                "1": "Do something",
+                "2": "Do something else",
+                "3": "Do something else after that",
+                "4": "Do something else after that"
+            },
+            "ingredients": {
+                "1": "Ingredient1",
+                "2": "Ingredient2",
+                "3": "Ingredient3"
+            }         
+        }
+    ]
+}
