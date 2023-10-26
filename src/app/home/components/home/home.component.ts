@@ -41,8 +41,8 @@ export class HomeComponent  implements OnInit {
 
   getEvents() {
     const url: string = '/assets/data/events.json'
-    this.getEventSubscription = this.http.get<{ food: Food[] }>(url).subscribe((response) => {
-      this.events = response.food;
+    this.getEventSubscription = this.http.get<{ event: Food[] }>(url).subscribe((response) => {
+      this.events = response.event;
     });
   }
 

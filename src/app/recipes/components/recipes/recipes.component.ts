@@ -30,13 +30,13 @@ export class RecipesComponent {
   }
 
   openRecipe(selectedRecipe) {
+    const id =selectedRecipe.id;
+    console.log(selectedRecipe.id)
     this.recipeService.onSelectedRecipe(selectedRecipe);
-    // const url = this.router.serializeUrl(
-    //   this.router.createUrlTree(['/recipe'])
-    // );
-    // window.open(url, '_blank');
-    this.router.navigate(['/recipe']);
-
+    const url = this.router.serializeUrl(
+      this.router.createUrlTree(['/recipe', id])
+    );
+    window.open(url, '_blank');
   }
 
 }

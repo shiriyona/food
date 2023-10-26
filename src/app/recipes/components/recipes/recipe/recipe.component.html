@@ -1,7 +1,7 @@
 <div class="container box">
     <div class="row">
         <!---Left Side--->
-        <div class="col-lg">
+        <div class="col-l">
             <h1> {{recipe?.title | translate}}</h1>
             <h5><i class="far fa-clock"></i> {{recipe.time}} | <i class="far fa-clock"></i> {{recipe.preparation}} | <i
                     class="far fa-smile-wink"></i> {{recipe.serving}}
@@ -11,8 +11,8 @@
             <div class="row Ingredients">
                 <div class="col">
                     <ul>
-                        <div class="ingredients" *ngFor="let ingredient of recipe?.ingredients | keyvalue">
-                            <li><span> {{ingredient?.value}}</span></li>
+                        <div class="ingredients" *ngFor="let item of recipe?.ingredients">
+                            <li><span> {{item?.name}}</span></li>
                         </div>
                         <img class="recipe-img" [src]="recipe.img">
                     </ul>
@@ -23,11 +23,10 @@
         </div>
         <div class="directions">
             <h4>{{"DIRECTIONS"| translate }}</h4>
-            <div *ngFor="let step of recipe.recipeSteps | keyvalue">
-
+            <div *ngFor="let recipeStep of recipe.recipeSteps">
                 <i class="far fa-check-square"></i> <span style="color:#caaca9;font-weight:bold;"><strong>S T E P
-                        {{step.key}}</strong></span>
-                <p>{{step.value}}</p>
+                        {{recipeStep.order}}</strong></span>
+                <p>{{recipeStep.step}}</p>
             </div>
         </div>
     </div>

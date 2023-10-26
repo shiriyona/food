@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeComponent } from './components/recipes/recipe/recipe.component';
 
+var id: number;
+
 const routes: Routes = [
     { path: '', component: RecipesComponent },
-    { path: 'recipe', component: RecipeComponent },
+    { path: 'recipe/:id', component: RecipeComponent },
     {
         path: '',
         redirectTo: 'recipes',
