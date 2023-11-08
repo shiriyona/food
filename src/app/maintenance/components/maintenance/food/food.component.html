@@ -1,0 +1,12 @@
+<button class="plus-button" (click)="openAddNewFood()">+</button>
+<div class="food">
+    <div class="food-list" *ngFor="let item of food">
+        <div class="food-title"> 
+            {{item.title}}
+        </div>
+        <div class="food-description">
+            {{item.description}}
+        </div>
+        <img class="item-img right" [src]="item.img">
+    </div>
+</div>

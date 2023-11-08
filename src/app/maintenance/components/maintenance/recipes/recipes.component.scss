@@ -1,0 +1,29 @@
+.food {
+    float: right;
+    display: inline-block;
+    height: 600px;
+    overflow: auto;
+}
+
+.food-list {
+
+}
+
+.item-img {
+    width: 100px;
+    display: inline-block;
+    margin-right: 10px;
+    display: inline-flex;
+}
+
+.food-description {
+    display: inline-flex;
+}
+
+.food-title {
+    display: inline-flex;
+}
+
+.plus-button {
+    background-color: white;
+}

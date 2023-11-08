@@ -16,7 +16,7 @@ import { FoodModalComponent } from './food-modal/food-modal.component';
 })
 export class HomeComponent  implements OnInit {
   food: Food[] = [];
-  events: Food[] = [];
+  events: Event[] = [];
   getFoodSubscription: Subscription;
   getEventSubscription: Subscription;
   
@@ -41,7 +41,7 @@ export class HomeComponent  implements OnInit {
 
   getEvents() {
     const url: string = '/assets/data/events.json'
-    this.getEventSubscription = this.http.get<{ event: Food[] }>(url).subscribe((response) => {
+    this.getEventSubscription = this.http.get<{ event: Event[] }>(url).subscribe((response) => {
       this.events = response.event;
     });
   }
@@ -59,8 +59,12 @@ export class HomeComponent  implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.getFoodSubscription.unsubscribe();
-    this.getEventSubscription.unsubscribe();
+    if (this.getFoodSubscription) {
+      this.getFoodSubscription.unsubscribe();
+    }
+    if (this.getEventSubscription) {
+      this.getEventSubscription.unsubscribe();
+    }
   }
 
   myMobile() {
