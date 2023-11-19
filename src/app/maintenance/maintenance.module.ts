@@ -13,7 +13,6 @@ import { FoodComponent } from './components/maintenance/food/food.component';
 import { EventsComponent } from './components/maintenance/events/events.component';
 import { RecipesComponent } from './components/maintenance/recipes/recipes.component';
 import { AddFoodComponent } from './components/maintenance/food/add-food/add-food.component';
-import { EditFoodComponent } from './components/maintenance/food/edit-food/edit-food.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -27,7 +26,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         EventsComponent,
         RecipesComponent,
         AddFoodComponent,
-        EditFoodComponent
     ],
     imports: [
         FormsModule,

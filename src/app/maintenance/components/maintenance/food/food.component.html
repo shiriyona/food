@@ -1,12 +1,23 @@
 <button class="plus-button" (click)="openAddNewFood()">+</button>
-<div class="food">
-    <div class="food-list" *ngFor="let item of food">
-        <div class="food-title"> 
+<div class="food" >
+    <div class="food-list" *ngFor="let item of food" (dblclick)="editFood(item)">
+        <tr>
+        <td><img class="delete-icon" src="../../../../assets/img/delete.png"></td>
+        <td><div class="food-title"> 
             {{item.title}}
         </div>
-        <div class="food-description">
+       <div class="food-description">
             {{item.description}}
-        </div>
-        <img class="item-img right" [src]="item.img">
+        </div></td>
+        <td><img class="item-img right" [src]="item.img"></td>
+        </tr>
+        <div *ngIf="item.isOpen" class="inner-row">
+            <div class="provider-id"><span class="id title">title: </span><input class="title info" value="{{item.title}}">></div><br>
+            <div class="provider-addres"><span class="addres title">Description: </span><input class="description info" value="{{item.description}}">><br></div>
+            <div class="provider-description"><span class="description title">Img: </span><img class="item-img right" [src]="item.img"></div>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <button mat-button class="edit-provider-button" (click)="openEditProviderDialog(provider)">edit</button>
+          </div>
     </div>
+
 </div>

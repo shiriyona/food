@@ -1,0 +1,62 @@
+.new-email{
+    width: 600px;  
+  }
+  
+  .description{
+    width: 582px;
+    height: 193px;
+  }
+  
+  #ignismyModal .modal-header{
+    border:0px;
+    display: inline;
+  }
+  
+  h3 {
+    display: inline;
+  }
+  
+  
+  .send-email-button{
+    background-color: #4F5B0A;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 98%;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    padding-top: 10px;
+  }
+  
+  .mat-dialog-content {
+    display: block;
+    margin: 0 -24px;
+    padding: 0 24px;
+    max-height: 65vh;
+    overflow: auto;
+    height: 440px;
+  }
