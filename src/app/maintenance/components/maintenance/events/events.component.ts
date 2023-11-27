@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Food } from 'src/app/home/models/food.model';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { AddEventComponent } from './add-event/add-event.component';
+
 
 @Component({
   selector: 'app-events',
@@ -12,7 +14,7 @@ export class EventsComponent {
   events: Event[] = [];
   getEventSubscription: Subscription;
 
-  constructor(private http: HttpClient) {  
+  constructor(private http: HttpClient, public dialog: MatDialog) {  
   }
 
   ngOnInit(): void {
@@ -26,5 +28,16 @@ export class EventsComponent {
     });
   }
 
+  openAddNewEvent() {
+    const dialogRef = this.dialog.open(AddEventComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  editEvent(selectedRecioe) {
+    selectedRecioe.isOpen = !selectedRecioe.isOpen;
+  }
 
 }

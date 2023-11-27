@@ -7,12 +7,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+import { NgOptimizedImage } from '@angular/common'
 import { MaintenanceRoutingModule } from "./maintenance-routing";
 import { MaintenanceComponent } from './components/maintenance/maintenance.component';
 import { FoodComponent } from './components/maintenance/food/food.component';
 import { EventsComponent } from './components/maintenance/events/events.component';
 import { RecipesComponent } from './components/maintenance/recipes/recipes.component';
 import { AddFoodComponent } from './components/maintenance/food/add-food/add-food.component';
+import { AddRecipeComponent } from './components/maintenance/recipes/add-recipe/add-recipe.component';
+import { AddEventComponent } from './components/maintenance/events/add-event/add-event.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -26,6 +29,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         EventsComponent,
         RecipesComponent,
         AddFoodComponent,
+        AddRecipeComponent,
+        AddEventComponent,
     ],
     imports: [
         FormsModule,
@@ -34,6 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         HttpClientModule,
         MatDialogModule,
         MatTabsModule,
+        NgOptimizedImage,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

@@ -1,23 +1,31 @@
-<button class="plus-button" (click)="openAddNewFood()">+</button>
-<div class="food" >
-    <div class="food-list" *ngFor="let item of food" (dblclick)="editFood(item)">
-        <tr>
-        <td><img class="delete-icon" src="../../../../assets/img/delete.png"></td>
-        <td><div class="food-title"> 
-            {{item.title}}
-        </div>
-       <div class="food-description">
-            {{item.description}}
-        </div></td>
-        <td><img class="item-img right" [src]="item.img"></td>
-        </tr>
-        <div *ngIf="item.isOpen" class="inner-row">
-            <div class="provider-id"><span class="id title">title: </span><input class="title info" value="{{item.title}}">></div><br>
-            <div class="provider-addres"><span class="addres title">Description: </span><input class="description info" value="{{item.description}}">><br></div>
-            <div class="provider-description"><span class="description title">Img: </span><img class="item-img right" [src]="item.img"></div>
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <button mat-button class="edit-provider-button" (click)="openEditProviderDialog(provider)">edit</button>
-          </div>
+<br>
+<button class="add-new-button" (click)="openAddNewFood()">{{"ADD NEW"| translate}}</button>
+  <div class="container" >
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1">{{"DELETE" |translate}}</div>
+            <div class="col col-2">{{"DESCIPTION" |translate}}</div>
+            <div class="col col-3">{{"TITLE" |translate}}</div>
+            <div class="col col-4">{{"IMG" |translate}}</div>
+            <div class="col col-5">#</div>
+          </li>
+          <div *ngFor="let item of food" >
+      <li class="table-row" (dblclick)="editFood(item)">
+        <div class="col col-1" data-label="delete"><img class="delete-icon" src="../../../../assets/img/delete.png"></div>
+        <div class="col col-2" data-label="description">{{item.description}}</div>
+        <div class="col col-3" data-label="title">{{item.title}}</div>
+        <div class="col col-4" data-label="img"><img class="item-img right" [src]="item.img"></div>
+        <div class="col col-5" data-label="img">{{item.id}}</div>
+      </li>
+      <li class="inner-row" *ngIf="item.isOpen">
+        <div class="title"><span class="id title">title: </span><input class="title info" value="{{item.title}}"></div><br>
+        <div class="description"><span class="addres title">Description: </span><input class="description info" value="{{item.description}}"><br></div>
+        <div class="img"><span class="description title">Img: </span><img class="item-img right" [src]="item.img"></div>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <button mat-button class="edit-provider-button" (click)="openEditRecipeDialog(provider)">edit</button>
+      </li>
     </div>
-
-</div>
+    </ul>
+  </div>
+  
+  
