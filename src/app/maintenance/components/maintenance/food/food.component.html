@@ -11,7 +11,7 @@
           </li>
           <div *ngFor="let item of food" >
       <li class="table-row" (dblclick)="editFood(item)">
-        <div class="col col-1" data-label="delete"><img class="delete-icon" src="../../../../assets/img/delete.png"></div>
+        <div class="col col-1" data-label="delete"><img class="delete-icon" src="../../../../assets/img/delete.png" (click)="deleteItem(item)"></div>
         <div class="col col-2" data-label="description">{{item.description}}</div>
         <div class="col col-3" data-label="title">{{item.title}}</div>
         <div class="col col-4" data-label="img"><img class="item-img right" [src]="item.img"></div>

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Food } from 'src/app/home/models/food.model';
 import { MaintenanceService } from 'src/app/maintenance/services/maintenance.service';
 // import {food} from 'src/assets/data/food.json';
 // import * as fs from 'fs';
