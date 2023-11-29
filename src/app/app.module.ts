@@ -17,6 +17,9 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { RecipesModule } from './recipes/recipes.module';
 import { MaintenanceModule } from './maintenance/maintenance.module';
+// import express from 'express';
+// import cors from 'cors';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
