@@ -24,7 +24,7 @@
         <div class="directions">
             <h4>{{"DIRECTIONS"| translate }}</h4>
             <div *ngFor="let recipeStep of recipe.recipeSteps">
-                <i class="far fa-check-square"></i> <span style="color:#caaca9;font-weight:bold;"><strong>S T E P
+                <i class="far fa-check-square"></i> <span style="color:#caaca9;font-weight:bold;"><strong>{{"STEP"| translate }}
                         {{recipeStep.order}}</strong></span>
                 <p>{{recipeStep.step}}</p>
             </div>

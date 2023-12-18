@@ -1,0 +1,7 @@
+{
+    "/food": {
+    "target": "https://github.com/shiriyona/food/blob/main/src/assets/data/food.json",
+    "secure": false,
+    "changeOrigin": true
+    }
+}

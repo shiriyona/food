@@ -18,6 +18,7 @@ import { AddRecipeComponent } from './components/maintenance/recipes/add-recipe/
 import { AddEventComponent } from './components/maintenance/events/add-event/add-event.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
+
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }

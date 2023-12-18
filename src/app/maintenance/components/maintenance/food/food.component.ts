@@ -5,6 +5,10 @@ import { Food } from 'src/app/home/models/food.model';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddFoodComponent } from './add-food/add-food.component';
 
+// import cors from 'cors';
+
+
+
 // import * as fs from 'fs';
 
 @Component({
@@ -13,25 +17,44 @@ import { AddFoodComponent } from './add-food/add-food.component';
   styleUrls: ['./food.component.scss']
 })
 export class FoodComponent {
+  url: string
   food: Food[] = [];
   events: Food[] = [];
   getFoodSubscription: Subscription;
   getEventSubscription: Subscription;
 
   constructor(private http: HttpClient, public dialog: MatDialog) {
+    this.url = '/https://github.com/shiriyona/food/blob/main/src/assets/data/food.json';
+    
   }
 
   ngOnInit(): void {
-    this.getFood();
-    const path = '/assets/data/food.json';
+    this.getPosts();
+  }
 
-// fs.access(path, fs.constants.F_OK | fs.constants.R_OK, (err) => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-//   console.log(`${path} exists and is readable`);
-// });
+
+  
+  jsonp(url: string, callback: (data: any) => void) {
+    
+    const callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+    window[callbackName] = function(data: any) {
+      delete window[callbackName];
+      document.body.removeChild(script);
+      callback(data);
+    };
+  
+    const script = document.createElement('script');
+    script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+    document.body.appendChild(script);
+  }
+  
+
+  getPosts(){
+    // this.jsonp(this.url, function(data) {})
+    let endPoints=""
+    this.getFoodSubscription = this.http.get<{ food: Food[] }>(this.url+endPoints).subscribe((response) => {
+      this.food = response.food;
+    });
   }
 
   getFood() {

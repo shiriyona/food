@@ -67,7 +67,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-food-and-kitchens:build:production"
+              "browserTarget": "my-food-and-kitchens:build:production",
+              "proxyConfig": "proxy.config.json"
             },
             "development": {
               "browserTarget": "my-food-and-kitchens:build:development"

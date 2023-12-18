@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  ngOnInit(): void {
+  }
+
+  
+  
+
   title = 'my-food-and-kitchens';
   loadedFeature = 'home';
 

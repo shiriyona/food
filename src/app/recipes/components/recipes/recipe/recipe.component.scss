@@ -1,11 +1,12 @@
-
+backgroundingredients
 .ingredients {
   display: inline;
 }
 
 .recipe-img  {
+    margin-top: -105px;
     display: inline;
-    width: 100%;
+    width: 400px;
 }
 
   .box {
@@ -16,6 +17,7 @@
   
   /* Font Styles */
   h1 {
+    margin-left: 1000px;
     font-family: "Merriweather", serif;
     font-weight: bold;
     font-style: italic;
@@ -31,6 +33,7 @@
   }
   
   p {
+    margin-left: 1000px;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 13px;
@@ -45,6 +48,7 @@
     text-transform: uppercase;
   }
   span {
+    margin-left: 1000px;
     font-weight: bold !important;
     text-transform: capitalize;
     line-height: 30px;
