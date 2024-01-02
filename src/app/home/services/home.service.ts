@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Food } from '../models/food.model';
+import { Food } from '../../header/shared/models/food.model';
 
 
 @Injectable({

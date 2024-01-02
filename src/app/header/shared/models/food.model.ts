@@ -1,12 +1,12 @@
 export class Food {
-    id: number;
-    title: string;
+    id: string;
+    name: string;
     description: string;
     img: string;
 
-    constructor(id:number, title: string, description: string, img: string) {
+    constructor(id:string, name: string, description: string, img: string) {
         this.id = id;
-        this.title = title;
+        this.name = name;
         this.description = description;
         this.img = img;
     }

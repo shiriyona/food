@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Food } from 'src/app/home/models/food.model';
+import { Food } from 'src/app/header/shared/models/food.model';
 import { HomeService } from 'src/app/home/services/home.service';
 
 @Component({

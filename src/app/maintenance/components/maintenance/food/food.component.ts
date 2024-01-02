@@ -1,14 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Food } from 'src/app/home/models/food.model';
+import { Food } from 'src/app/header/shared/models/food.model';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddFoodComponent } from './add-food/add-food.component';
 
 // import cors from 'cors';
-
-
-
 // import * as fs from 'fs';
 
 @Component({
@@ -24,43 +21,16 @@ export class FoodComponent {
   getEventSubscription: Subscription;
 
   constructor(private http: HttpClient, public dialog: MatDialog) {
-    this.url = '/https://github.com/shiriyona/food/blob/main/src/assets/data/food.json';
-    
   }
 
   ngOnInit(): void {
-    this.getPosts();
-  }
-
-
-  
-  jsonp(url: string, callback: (data: any) => void) {
-    
-    const callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
-    window[callbackName] = function(data: any) {
-      delete window[callbackName];
-      document.body.removeChild(script);
-      callback(data);
-    };
-  
-    const script = document.createElement('script');
-    script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
-    document.body.appendChild(script);
-  }
-  
-
-  getPosts(){
-    // this.jsonp(this.url, function(data) {})
-    let endPoints=""
-    this.getFoodSubscription = this.http.get<{ food: Food[] }>(this.url+endPoints).subscribe((response) => {
-      this.food = response.food;
-    });
+    this.getFood();
   }
 
   getFood() {
-    const url: string = '/assets/data/food.json';
-    this.getFoodSubscription = this.http.get<{ food: Food[] }>(url).subscribe((response) => {
-      this.food = response.food;
+    const url: string = 'https://food-data-ea6b3-default-rtdb.firebaseio.com/posts/food.json'
+    this.getFoodSubscription = this.http.get<Food[]>(url).subscribe((response) => {
+      this.food = response;
     });
   }
 
@@ -95,7 +65,7 @@ export class FoodComponent {
 
   deleteItem(item: Food) {
     const url2: string = '/assets/data/food.json';
-    const url: string = 'C:/Users/97254/Downloads/angularCourse/my-food-and-kitchens/src/assets/data/food.json';
+    const url: string = 'https://food-data-ea6b3-default-rtdb.firebaseio.com/posts/food.json';
     this.http.get<{ food: Food[] }>(url).subscribe((response) => {
       const index = response.food.findIndex((food) => food.id === item.id);
       if (index !== -1) {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-import { Food } from '../../models/food.model';
+import { Food } from '../../../header/shared/models/food.model';
 import { Subscription } from 'rxjs';
 import { HomeService } from '../../services/home.service';
 import { HttpClient } from '@angular/common/http';
@@ -21,7 +21,7 @@ export class HomeComponent  implements OnInit {
   getEventSubscription: Subscription;
   
   constructor(private translate: TranslateService, private router: Router,
-     private http: HttpClient, private homeService: HomeService, public dialog: MatDialog) {
+    private http: HttpClient, private homeService: HomeService, public dialog: MatDialog) {
     translate.addLangs(['hb', 'klingon']);
     translate.setDefaultLang('hb');
     translate.use('hb');
@@ -32,10 +32,19 @@ export class HomeComponent  implements OnInit {
     this.getEvents();
   }
 
-  getFood() {
-    const url: string = '/assets/data/food.json'
-    this.getFoodSubscription = this.http.get<{ food: Food[] }>(url).subscribe((response) => {
-      this.food = response.food;
+  getFood() {      
+    //    const url: string = '/assets/data/food.json'
+    // this.getFoodSubscription = this.http.get<{ food: Food[] }>(url).subscribe((response) => {
+    //   this.food = response.food;
+    //   this.http.put('https://food-data-ea6b3-default-rtdb.firebaseio.com/posts/food.json', this.food).subscribe(
+    //     postData => {
+    //       console.log(postData);
+    //     }
+    //   )
+    // });
+    const url: string = 'https://food-data-ea6b3-default-rtdb.firebaseio.com/posts/food.json'
+    this.getFoodSubscription = this.http.get<Food[]>(url).subscribe((response) => {
+        this.food = response;
     });
   }
 

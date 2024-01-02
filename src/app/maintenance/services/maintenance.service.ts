@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Food } from 'src/app/home/models/food.model';
+import { Food } from 'src/app/header/shared/models/food.model';
 
 
 @Injectable({

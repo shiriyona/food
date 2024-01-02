@@ -1,61 +1,61 @@
 {
     "food": [
         {
-            "id": 1,
+            "id": "",
             "title": "potato1",
             "description": "floral embrace1",
             "img": "../../../../assets/img/food1.jpg"
         },
         {
-            "id": 2,
+            "id": "",
             "title": "potato2",
             "description": "floral embrace2",
             "img": "../../../../assets/img/food2.JPG"
         },
         {
-            "id": 3,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food3.JPG"
         },
         {
-            "id": 4,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food4.JPG"
         },
         {
-            "id": 5,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food5.JPG"
         },
         {
-            "id": 6,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food6.JPG"
         },
         {
-            "id": 7,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food7.JPG"
         },
         {
-            "id": 8,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food8.JPG"
         },
         {
-            "id": 9,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food9.JPG"
         },
         {
-            "id": 10,
+            "id": "",
             "title": "potato",
             "description": "floral embrace",
             "img": "../../../../assets/img/food10.JPG"
